@@ -4,3 +4,4 @@
 - les conditions ne sont pas bien faites (incrémentations / décrémentations de la valeur testé juste après le test)
 - pas de this.[Attr]
 - Le logging pourait etre renforcé (logger à la place de system.out)
+- Pas de normalisation de la langue (mix anglais/français)
