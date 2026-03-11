@@ -1,0 +1,6 @@
+- des arguments de méthodes ne sont jamais utilisés
+- utilisation de nombres magiques (devrait y avoir un fichier constantes)
+- des variables servent a rien
+- les conditions ne sont pas bien faites (incrémentations / décrémentations de la valeur testé juste après le test)
+- pas de this.[Attr]
+- Le logging pourait etre renforcé (logger à la place de system.out)
