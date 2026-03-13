@@ -54,7 +54,6 @@ public class Car {
 
     public void changeSpeed(Driver driver, int newSpeed) {
         System.out.println(driver.getName() + " change la vitesse de la voiture à " + newSpeed);
-        int vitesseActuelle;
         if (getSpeed() >= newSpeed) {
             while (getSpeed() > newSpeed && getSpeed() > MINIMUM_SPEED) {
                 slowDown();
@@ -65,7 +64,7 @@ public class Car {
             }
         }
         if (getSpeed() != newSpeed) {
-            System.out.println("La vitesse cible est inategnable");
+            System.out.println("La vitesse cible est inattegnable");
         }
     }
 }
