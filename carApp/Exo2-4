@@ -4,3 +4,4 @@ Ajouts par rapport à la question 1 :
 - Les methodes et les attributs devraient etre finaux (immutable)
 - Il y a des problemes d'indentation
 - Les classes devraient etre static
+- Les methodes
