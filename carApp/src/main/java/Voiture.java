@@ -50,16 +50,21 @@ public class Voiture {
     }
 
     public void changerVitesse(Conducteur conducteur, int nouvelleVitesse) {
-        System.out.println(conducteur.getName() + " change la vitesse de la voiture à " + nouvelleVitesse);
-        int vitesseActuelle;
-        if (getVitesse() >= nouvelleVitesse) {
-            while (getVitesse() > nouvelleVitesse) {
-                ralentir();
+        if (nouvelleVitesse >= 0 && nouvelleVitesse <= 120) {
+            System.out.println(conducteur.getName() + " change la vitesse de la voiture à " + nouvelleVitesse);
+            int vitesseActuelle;
+            if (getVitesse() >= nouvelleVitesse) {
+                while (getVitesse() > nouvelleVitesse) {
+                    ralentir();
+                }
+            } else  {
+                while (getVitesse() < nouvelleVitesse) {
+                    accelerer();
+                }
             }
-        } else  {
-            while (getVitesse() < nouvelleVitesse) {
-                accelerer();
-            }
+        }
+        else {
+            System.out.println(conducteur.getName() + " essaye d'atteindre une vitesse interdite");
         }
     }
 }
