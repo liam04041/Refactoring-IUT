@@ -50,21 +50,19 @@ public class Voiture {
     }
 
     public void changerVitesse(Conducteur conducteur, int nouvelleVitesse) {
-        if (nouvelleVitesse >= 0 && nouvelleVitesse <= 120) {
-            System.out.println(conducteur.getName() + " change la vitesse de la voiture à " + nouvelleVitesse);
-            int vitesseActuelle;
-            if (getVitesse() >= nouvelleVitesse) {
-                while (getVitesse() > nouvelleVitesse) {
-                    ralentir();
-                }
-            } else  {
-                while (getVitesse() < nouvelleVitesse) {
-                    accelerer();
-                }
+        System.out.println(conducteur.getName() + " change la vitesse de la voiture à " + nouvelleVitesse);
+        int vitesseActuelle;
+        if (getVitesse() >= nouvelleVitesse) {
+            while (getVitesse() > nouvelleVitesse && getVitesse() > 0) {
+                ralentir();
+            }
+        } else  {
+            while (getVitesse() < nouvelleVitesse && getVitesse() < 120) {
+                accelerer();
             }
         }
-        else {
-            System.out.println(conducteur.getName() + " essaye d'atteindre une vitesse interdite");
+        if (getVitesse() != nouvelleVitesse) {
+            System.out.println("La vitesse cible est inategnable");
         }
     }
 }

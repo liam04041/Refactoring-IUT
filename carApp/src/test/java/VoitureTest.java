@@ -56,9 +56,9 @@ public class VoitureTest {
         Voiture voiture = new Voiture("Sedan", "Bleu");
         Conducteur conducteurTest = new Conducteur("John", 20);
 
-        voiture.changerVitesse(conducteurTest,130);
+        voiture.changerVitesse(conducteurTest,120);
 
-        assertThat(voiture.getVitesse()).isEqualTo(130);
+        assertThat(voiture.getVitesse()).isEqualTo(120);
     }
 
     @Test
@@ -68,7 +68,7 @@ public class VoitureTest {
 
         voiture.changerVitesse(conducteurTest,150);
 
-        assertThat(voiture.getVitesse()).isEqualTo(130);
+        assertThat(voiture.getVitesse()).isEqualTo(120);
     }
 
     @Test
