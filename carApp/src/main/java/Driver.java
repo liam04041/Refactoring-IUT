@@ -1,5 +1,6 @@
-public class Conducteur {
+public class Driver {
 
+    public static final int MINIMUM_ADULT_AGE = 10;
     private String name;
     private int age;
 
@@ -16,12 +17,12 @@ public class Conducteur {
         this.age = age;
     }
 
-    public Conducteur(String name, int years) {
+    public Driver(String name, int years) {
         this.name = name;
         this.age = years;
     }
-    public boolean estAdulte() {
-        return age >= 10;
+    public boolean isAdult() {
+        return age >= MINIMUM_ADULT_AGE;
     }
 
 }
